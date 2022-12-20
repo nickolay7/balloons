@@ -441,13 +441,13 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 81%);
 }
 .rotated-card__img_group {
-  background: #BA8554 url("../../img/Photo-card-1.png") center/cover no-repeat;
+  background: #BA8554 url("../img/Photo-card-1.png") center/cover no-repeat;
 }
 .rotated-card__img_privet {
-  background: #BA8554 url("../../img/Photo-card-2.png") center/cover no-repeat;
+  background: #BA8554 url("../img/Photo-card-2.png") center/cover no-repeat;
 }
 .rotated-card__img_grounds {
-  background: #BA8554 url("../../img/Photo-card.png") center/cover no-repeat;
+  background: #BA8554 url("../img/Photo-card.png") center/cover no-repeat;
 }
 .rotated-card__title {
   position: absolute;
@@ -791,7 +791,7 @@ body {
 .promo {
   padding: 21.5rem;
   height: 73.1rem;
-  background: linear-gradient(91.4deg, rgba(186, 133, 84, 0.7) 16.34%, rgba(0, 0, 0, 0.7) 98.8%), url("../../img/promo_bg.jpg") center/cover no-repeat;
+  background: linear-gradient(91.4deg, rgba(186, 133, 84, 0.7) 16.34%, rgba(0, 0, 0, 0.7) 98.8%), url("../img/promo_bg.jpg") center/cover no-repeat;
   transform: skewY(5deg);
 }
 .promo > * {
