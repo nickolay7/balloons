@@ -581,7 +581,7 @@ body {
   height: 50rem;
   width: 114rem;
   padding: 5rem;
-  background: linear-gradient(105deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9) 56%, transparent 56%), url("../../img/bg-form.jpg") center/contain no-repeat;
+  background: linear-gradient(105deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9) 56%, transparent 56%), url("../img/bg-form.jpg") center/contain no-repeat;
 }
 .form__content {
   width: 71.8rem;
