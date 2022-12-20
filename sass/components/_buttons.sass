@@ -1,0 +1,82 @@
+.card-btn
+  @include btn-general-style($gray)
+  position: static
+  background-color: #fff
+  padding: 1.5rem 2rem
+  border-radius: 5rem
+  font-weight: 600
+  font-size: 2rem
+  line-height: 2.4rem
+  display: inline-block
+  letter-spacing: .5rem
+  transition: .3s
+  &:hover
+    transform: translateY(-4px)
+    box-shadow: $box-shadow
+    &:after
+      transform: scale(1.6)
+      opacity: 0
+    &:active
+      transform: translateY(-.2rem)
+
+
+.btn
+  &, &:link, &:visited
+    @include btn-general-style($gray)
+    background-color: #fff
+    padding: 1.5rem 4rem
+    border-radius: 5rem
+    font-weight: 600
+    font-size: 2rem
+    line-height: 2.4rem
+    display: inline-block
+    letter-spacing: .5rem
+    transition: .3s
+    border: none
+  &:hover
+    transform: translateY(-4px)
+    box-shadow: $box-shadow
+    &:after
+      transform: scale(1.6)
+      opacity: 0
+  &:active
+    transform: translateY(-.2rem)
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    width: 100%
+    height: 100%
+    background-color: $white
+    border-radius: 5rem
+    display: inline-block
+    transition: .2s
+  &_animated
+    animation: bottomToUp .7s ease
+    animation-fill-mode: backwards
+
+.btn_brown
+  background: $brown-light
+  color: $white
+  &:after
+    background: $brown-light
+
+
+.link-btn
+    border: none
+    padding: 1rem
+    font-weight: 700
+    font-size: 1.6rem
+    line-height: 1.9rem
+    letter-spacing: .2rem
+    color: $gray
+    border-bottom: .1rem solid
+    transition: .6s
+    &:hover
+      color: $white
+      transition: .6s
+      background-color: $brown-light
+    &:active
+      transform: scale(.95)

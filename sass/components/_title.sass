@@ -1,0 +1,49 @@
+.title-main
+  text-transform: uppercase
+  font-weight: 800
+  font-size: 5rem
+  line-height: 6rem
+  letter-spacing: 1rem
+  animation: leftToRight ease 1.7s
+  backface-visibility: hidden
+
+.title-secondary
+  text-transform: lowercase
+  display: block
+  font-weight: 100
+  font-size: 4rem
+  line-height: 4.8rem
+  letter-spacing: .5rem
+  animation: rightToLeft ease 1.7s
+  backface-visibility: hidden
+  margin-bottom: 5rem
+
+.title-h2
+  text-align: center
+  font-weight: 800
+  font-size: 3.6rem
+  text-transform: uppercase
+  line-height: 4.3rem
+  letter-spacing: 1rem
+  background: linear-gradient(90deg, rgba($brown-light, 0.7) 0.03%, rgba($black, 0.7) 99.94%)
+  -webkit-background-clip: text
+  color: transparent
+  backface-visibility: hidden
+  transition: .5s
+  &_text-left
+    text-align: left
+  &_white
+    color: $white
+  &_brown-gradient
+    background: linear-gradient(90deg, rgba($brown-light, 0.7) 0.03%, rgba($brown-dark, 0.7) 99.94%)
+    -webkit-background-clip: text
+  &:hover
+    transform: skewY(.2deg) skewX(-15deg) scale(1.1)
+    text-shadow: 0 .4rem .4rem rgba($black, .3)
+
+.title-h3
+  font-weight: 700
+  font-size: 2rem
+  line-height: 2.4rem
+  letter-spacing: .2rem
+  color: $gray

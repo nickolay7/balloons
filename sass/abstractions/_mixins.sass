@@ -1,0 +1,11 @@
+@mixin btn-general-style($color)
+  position: relative
+  text-transform: uppercase
+  text-decoration: none
+  color: $color
+
+@mixin clearfix
+  &::after
+    content: ""
+    display: table
+    clear: both

@@ -1,0 +1,76 @@
+.form
+  height: 50rem
+  width: 114rem
+  padding: 5rem
+  background: linear-gradient(105deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9) 56%, transparent 56%), url("../../img/bg-form.jpg") center/contain no-repeat
+  &__content
+    width: 71.8rem
+  &__input
+    margin-bottom: 2.4rem
+    input
+      width: 35.5rem
+      padding: 1.8rem 0 1.8rem 2.2rem
+      border: none
+      border-radius: .5rem
+      font-weight: 400
+      font-size: 1.6rem
+      line-height: 1.9rem
+      letter-spacing: .2rem
+      color: #777777
+      &:focus:invalid
+        outline: none
+        border-bottom: .2rem solid #D76363
+      &:focus
+        outline: none
+        border-bottom: .2rem solid #66D763
+      &:placeholder-shown + label
+        opacity: 0
+        transform: translateY(-1rem)
+    label
+      display: block
+      margin: 1rem 0 0 1.5rem
+      font-weight: 400
+      font-size: 1.6rem
+      line-height: 1.9rem
+      letter-spacing: .2rem
+      color: #777777
+      transition: .6s
+      opacity: 1
+  &__checkbox
+    display: inline-block
+    font-weight: 400
+    font-size: 1.6rem
+    line-height: 1.9rem
+    letter-spacing: .2rem
+    color: #777777
+    position: relative
+    margin-left: 4.2rem
+    label
+      &:hover
+        cursor: pointer
+    &:nth-child(2)
+      margin-left: 6.6rem
+    input:checked + label span:after
+      opacity: 1
+    input
+      display: none
+    span
+      width: 3rem
+      height: 3rem
+      border: .5rem solid $brown-light
+      border-radius: 100%
+      display: block
+      position: absolute
+      top: -.5rem
+      left: -4.2rem
+      &:after
+        content: ''
+        width: 1.3rem
+        height: 1.3rem
+        border-radius: 100%
+        background: $brown-light
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        opacity: 0

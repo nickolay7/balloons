@@ -1,0 +1,27 @@
+.composition
+  position: relative
+  background: gray
+  &:hover :not(&__img:hover)
+    transform: scale(.95)
+  &__img
+    display: block
+    position: absolute
+    width: 60%
+    transition: .6s
+    border-radius: 1rem
+    outline-offset: .3rem
+    box-shadow: $box-shadow
+    &:hover
+      transform: scale(1.1)
+      outline: $gray .5rem solid
+      z-index: 3
+    &_n1
+      top: 0
+      left: 0
+    &_n2
+      top: 16rem
+      left: 3rem
+      z-index: 2
+    &_n3
+      right: 0
+      top: 9rem

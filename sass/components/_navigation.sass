@@ -1,0 +1,100 @@
+@mixin hamburger
+  display: block
+  width: 3rem
+  border-bottom: 2px solid #000000
+
+@mixin pseudo-hamburger
+  content: ''
+  margin-bottom: .8rem
+  transition: .2s
+
+.checkbox
+  position: absolute
+  top: 10rem
+  right: 12rem
+  background: $white
+  width: 7rem
+  height: 7rem
+  border-radius: 50%
+  z-index: 6
+  cursor: pointer
+  display: none
+  &:checked ~ .navigation
+    display: block
+    position: fixed
+    opacity: 1
+    z-index: 5
+  &:checked + .hamburger > .hamburger__item
+    top: 58%
+    border-bottom: 2px solid #fff
+  &:checked + .hamburger .hamburger__item:after
+    transform: rotate(45deg)
+  &:checked + .hamburger .hamburger__item:before
+    transform: rotate(-45deg)
+    margin-bottom: -.2rem
+
+.hamburger
+  position: absolute
+  top: 10rem
+  right: 12rem
+  background: $white
+  width: 7rem
+  height: 7rem
+  border-radius: 50%
+  z-index: 6
+  cursor: pointer
+  &__item:hover:before,
+  &__item:hover:after
+    margin-bottom: .9rem
+  &__item
+    @include hamburger
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    &:after
+      @include hamburger
+      @include pseudo-hamburger
+    &:before
+      @include hamburger
+      @include pseudo-hamburger
+
+
+.navigation
+  width: 100vw
+  height: 100vh
+  display: none
+  opacity: 0
+  &__menu-wrapper
+    width: 100%
+    height: 100%
+    position: relative
+    background: radial-gradient(rgba($brown-light, .8), rgba($brown-dark, .8))
+    transition: .3s
+  &__menu
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+  &__item
+    margin-bottom: 5rem
+    text-align: center
+  &__link
+    text-decoration: none
+    text-transform: uppercase
+    color: $white
+    display: inline-block
+    &:link, &:visited
+      font-weight: 300
+      font-size: 4rem
+      line-height: 4.8rem
+      letter-spacing: .5rem
+      background: rgb(161,79,3)
+      background: linear-gradient(120deg, transparent, transparent 50%, $white 50%)
+      background-size: 220%
+      padding: 1rem 2rem
+      transition: .4s
+    &:hover, &:active
+      background-position: 100%
+      color: $brown-dark
+      transform: translateX(1rem)

@@ -1,0 +1,86 @@
+.rotated-card
+  position: relative
+  perspective: 150rem
+  -moz-perspective: 150rem
+  border-radius: .3rem
+  &:hover &__side_front
+    transform: rotateY(180deg)
+    backface-visibility: hidden
+  &:hover &__side_back
+    transform: rotateY(360deg)
+  &__side
+    width: 100%
+    height: 52rem
+    transition: 1s ease-out
+    box-shadow: 0 .4rem .4rem rgba(0, 0, 0, 0.1)
+    border-radius: .5rem
+    overflow: hidden
+    &_front
+      position: absolute
+      top: 0
+      left: 0
+    &_back
+      background: linear-gradient(156.85deg, #C3956A 3.65%, #A24F03 100%)
+      transform: rotateY(180deg)
+      backface-visibility: hidden
+  &__img
+    height: 24rem
+    background-blend-mode: hard-light
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 81%)
+    &_group
+      background: $brown-light url("../../img/Photo-card-1.png") center/cover no-repeat
+    &_privet
+      background: $brown-light url("../../img/Photo-card-2.png") center/cover no-repeat
+    &_grounds
+      background: $brown-light url("../../img/Photo-card.png") center/cover no-repeat
+  &__title
+    position: absolute
+    top: 17.6rem
+    right: 0
+    padding: 1rem 2rem .4rem
+    font-weight: 300
+    font-size: 28px
+    line-height: 34px
+    text-align: right
+    letter-spacing: 2px
+    color: #FFFFFF
+    background: linear-gradient(90deg, #C3956A 3.65%, #A24F03 100%)
+    &_bottom
+      position: absolute
+      background: linear-gradient(90deg, #C3956A 3.65%, #A24F03 100%)
+      right: 0
+      top: 4.7rem
+      padding: .5rem 2rem 1rem
+  ul
+    padding: 5rem 4.5rem 5.5rem
+    list-style-type: none
+    text-align: center
+    font-weight: 700
+    font-size: 16px
+    line-height: 19px
+    letter-spacing: 2px
+    text-decoration: underline
+    color: #777777
+    li:not(li:last-child)
+      margin-bottom: 2rem
+
+  &__back-side-content
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    text-align: center
+  &__title-back
+    font-weight: 300
+    font-size: 1.6rem
+    line-height: 1.9rem
+    letter-spacing: .2rem
+    color: #FFFFFF
+  &__price
+    font-weight: 500
+    font-size: 6rem
+    line-height: 7.2rem
+    letter-spacing: .2rem
+    color: #FFFFFF
+
+
