@@ -31,6 +31,21 @@
 html {
   font-size: 62.5%;
 }
+@media (max-width: 1200px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 30%;
+  }
+}
 
 body {
   background-color: #ffffff;
@@ -715,7 +730,7 @@ body {
 .hamburger__item {
   display: block;
   width: 3rem;
-  border-bottom: 2px solid #000000;
+  border-bottom: 0.2rem solid #000000;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -724,7 +739,7 @@ body {
 .hamburger__item:after {
   display: block;
   width: 3rem;
-  border-bottom: 2px solid #000000;
+  border-bottom: 0.2rem solid #000000;
   content: "";
   margin-bottom: 0.8rem;
   transition: 0.2s;
@@ -732,7 +747,7 @@ body {
 .hamburger__item:before {
   display: block;
   width: 3rem;
-  border-bottom: 2px solid #000000;
+  border-bottom: 0.2rem solid #000000;
   content: "";
   margin-bottom: 0.8rem;
   transition: 0.2s;
