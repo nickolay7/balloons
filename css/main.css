@@ -1113,6 +1113,11 @@ body {
     padding-top: 28rem;
   }
 }
+@media (max-width: 992px) {
+  .about__comp-wrapper {
+    padding-top: 8rem;
+  }
+}
 
 .promo {
   display: flex;
