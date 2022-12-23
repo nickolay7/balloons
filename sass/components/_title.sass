@@ -6,7 +6,13 @@
   letter-spacing: 1rem
   animation: leftToRight ease 1.7s
   backface-visibility: hidden
-
+  @include respond(tab-port)
+    font-size: 3rem
+    line-height: 5rem
+    letter-spacing: .7rem
+  @include respond(tab-port)
+    font-size: 4rem
+    letter-spacing: .4rem
 .title-secondary
   text-transform: lowercase
   display: block
@@ -17,7 +23,8 @@
   animation: rightToLeft ease 1.7s
   backface-visibility: hidden
   margin-bottom: 5rem
-
+  @include respond(tab-port)
+    font-size: 3rem
 .title-h2
   text-align: center
   font-weight: 800
@@ -30,6 +37,13 @@
   color: transparent
   backface-visibility: hidden
   transition: .5s
+  @include respond(tab-land)
+    font-size: 2.7rem
+  @include respond(tab-port)
+    letter-spacing: .6rem
+  @include respond(phone)
+    font-size: 3rem
+    letter-spacing: .5rem
   &_text-left
     text-align: left
   &_white
@@ -47,3 +61,9 @@
   line-height: 2.4rem
   letter-spacing: .2rem
   color: $gray
+  @include respond(tab-port)
+    margin-left: 1rem
+  @include respond(phone)
+    font-size: 2.5rem
+    text-align: center
+

@@ -2,13 +2,25 @@
   height: 37.9rem
   padding: 8rem 0
   background: #333333
+  @include respond(tab-port)
+    padding: 5rem 0
+    height: unset
   &__logo
     text-align: center
     margin-bottom: 5rem
+    @include respond(tab-port)
+      margin-bottom: 4rem
+    img
+      @include respond(phone)
+        width: 10rem
   &__nav
     list-style-type: none
     display: flex
     justify-content: space-around
+    @include respond(tab-port)
+      gap: 4rem
+      flex-flow: wrap
+      justify-content: center
   &__nav-item
     a
       text-decoration: none

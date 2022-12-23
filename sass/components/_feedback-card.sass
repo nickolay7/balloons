@@ -1,10 +1,24 @@
 .feedback-card
-  padding: 5rem 15rem
+  padding: 5rem 7rem
   box-shadow: $box-shadow
   transform: skewX(330deg)
   background: $white
+  @include respond(tab-port)
+    transform: skewX(350deg)
+    padding: 3rem 1rem
+  @include respond(phone)
+    transform: skewX(0deg)
+    border-radius: .5rem
+  &__wrapper
+    padding: 0 9rem
+    @include respond(phone)
+      padding: 0
   & > *
     transform: skewX(-330deg)
+    @include respond(tab-port)
+      transform: skewX(-350deg)
+    @include respond(phone)
+      transform: skewX(0deg)
   &:hover &__name
     opacity: 1
     transform: translate(-50%, -50%)
@@ -15,19 +29,30 @@
     width: 16.7rem
     height: 16.7rem
     float: left
-    border-radius: 100rem
+    border-radius: 50rem
     shape-outside: circle(50% at 50% 50%)
     --webkit-shape-outside: circle(50% at 50% 50%)
-    margin-right: 5rem
+    margin-right: 1rem
     overflow: hidden
     position: relative
+    @include respond(tab-port)
+      float: none
+      text-align: center
+      width: 100%
+      overflow: unset
+      margin-bottom: 2rem
     img
       height: 100%
+      border-radius: 50rem
       transition: .5s
       scale: 1.1
   &__text-content
-    padding-top: 1rem
     height: 16.7rem
+    text-align: center
+    @include respond(tab-port)
+      margin-left: 1.8rem
+      margin-bottom: 1rem
+      height: unset
   &__name
     position: absolute
     top: 50%

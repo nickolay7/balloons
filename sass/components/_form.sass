@@ -1,12 +1,15 @@
 .form
   height: 50rem
-  width: 114rem
+  width: 100%
   padding: 5rem
-  background: linear-gradient(105deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9) 56%, transparent 56%), url("../img/bg-form.jpg") center/contain no-repeat
+  background: linear-gradient(105deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9) 56%, transparent 56%), url("../img/bg-form.jpg") center/cover no-repeat
+  @include respond(tab-port)
+    background: linear-gradient(105deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9) 56%), url(../img/bg-form.jpg) 78%/cover no-repeat
+    padding: 3rem
+
   &__content
     width: 71.8rem
   &__input
-    margin-bottom: 2.4rem
     input
       width: 35.5rem
       padding: 1.8rem 0 1.8rem 2.2rem
@@ -44,12 +47,15 @@
     letter-spacing: .2rem
     color: #777777
     position: relative
-    margin-left: 4.2rem
+    padding-left: 4rem
+    margin-right: 2rem
+    @include respond(tab-land)
+      display: block
     label
       &:hover
         cursor: pointer
-    &:nth-child(2)
-      margin-left: 6.6rem
+    &:first-child
+      margin-bottom: 1.9rem
     input:checked + label span:after
       opacity: 1
     input
@@ -62,15 +68,18 @@
       display: block
       position: absolute
       top: -.5rem
-      left: -4.2rem
+      left: 0
       &:after
         content: ''
         width: 1.3rem
         height: 1.3rem
-        border-radius: 100%
+        border-radius: 50%
         background: $brown-light
         position: absolute
         top: 50%
         left: 50%
         transform: translate(-50%, -50%)
         opacity: 0
+  &__btn
+    @include respond(tab-port)
+      margin-left: 2rem

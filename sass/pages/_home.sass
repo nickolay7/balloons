@@ -1,23 +1,44 @@
 .about
   padding-top: 8rem
+  &__comp-wrapper
+    @include respond(tab-land)
+      padding-top: 28rem
 
 .promo
-  padding: 21.5rem
+  display: flex
+  justify-content: center
+  align-items: center
   height: 73.1rem
   background: linear-gradient(91.4deg, rgba(186, 133, 84, 0.7) 16.34%, rgba(0, 0, 0, 0.7) 98.8%), url("../img/promo_bg.jpg") center/cover no-repeat
   //clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%)
   transform: skewY(5deg)
+  @include respond(tab-land)
+    height: 65rem
+  @include respond(tab-port)
+    height: 140rem
+  @include respond(phone)
+    height: 165rem
   & > *
     transform: skewY(-5deg)
 
 .tour
   padding: 20rem 0 8rem
+  @include respond(tab-port)
+    padding: 12rem 0 7rem
+  &__btn
+    @include respond(phone)
+      display: none
 
 .feedback
   padding: 8rem 0
   position: relative
   z-index: 1
+  border-radius: .5rem
+  @include respond(tab-port)
+    padding: 3rem 0
 
 .section-form
   padding: 10rem
   background: linear-gradient(90deg, #C3956A 3.65%, #A24F03 100%)
+  @include respond(phone)
+    padding: 3rem

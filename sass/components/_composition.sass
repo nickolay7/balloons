@@ -1,6 +1,7 @@
 .composition
   position: relative
-  background: gray
+  @include respond(tab-port)
+    height: 46rem
   &:hover :not(&__img:hover)
     transform: scale(.95)
   &__img
